@@ -1,8 +1,8 @@
 import math
 
 def mergesort(arr):
-    print(arr)
-    if len(arr) == 1:
+    print(f'mergesort called on arr: {arr}')
+    if len(arr) <= 1:
         return arr
     else:
         return merge(
@@ -12,8 +12,10 @@ def mergesort(arr):
 
 def next_elem(arr_0, arr_1):
     if arr_0[0] < arr_1[0]:
+        print(f'next elem from: {arr_0}')
         return arr_0
     else:
+        print(f'next elem from: {arr_1}')
         return arr_1
 
 def merge(arr_l, arr_r):
@@ -21,7 +23,10 @@ def merge(arr_l, arr_r):
     while arr_l and arr_r:
         merged.append(next_elem(arr_l, arr_r).pop(0))
     if arr_l:
-        merged.append(arr_l[0])
+        print('right array empty')
+        merged.extend(arr_l)
     else:
-        merged.append(arr_r[0])
+        print('left array empty')
+        merged.extend(arr_r)
+    print(f'merged: {merged}')
     return merged
