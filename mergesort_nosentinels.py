@@ -1,5 +1,7 @@
 import math
 
+# mergesort without using sentinels. CLRS 2.3.2
+
 def mergesort(arr):
     print(f'mergesort called on arr: {arr}')
     if len(arr) <= 1:
