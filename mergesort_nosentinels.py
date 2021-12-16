@@ -1,6 +1,7 @@
 import math
 
 # mergesort without using sentinels. CLRS 2.3.2
+# with lots of prints
 
 def mergesort(arr):
     print(f'mergesort called on arr: {arr}')
